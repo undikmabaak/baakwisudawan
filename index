@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Web Google Apps Script</title>
+    <style>
+        /* Menghilangkan margin bawaan browser */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #f5f5f5; /* Warna latar belakang halaman */
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Mencegah double scrollbar yang mengganggu di HP */
+        }
+
+        /* Wadah Utama untuk Iframe */
+        .app-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Memenuhi 100% tinggi layar perangkat */
+            max-width: 100%;
+        }
+
+        /* Mengatur Iframe agar Responsif */
+        .app-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Menghilangkan border kotak bawaan iframe */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Iframe yang terhubung langsung ke Google Apps Script Anda -->
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbzogZDRr1oxHpRUH0_Fq2F1pC5Q8vFNDLGJnsCh674U58ZTqkpW16x0zeMBqDRlIEw7/exec"
+            allow="geolocation; microphone; camera">
+        </iframe>
+    </div>
+
+</body>
+</html>
